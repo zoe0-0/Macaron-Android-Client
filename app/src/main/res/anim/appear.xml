@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Set이라는건 두가지 이상의 효과를 동시에 사용할때 사용
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false" >
+    <translate
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:duration="@android:integer/config_longAnimTime"
+        android:fromYDelta="100%"
+        android:toYDelta="70%" />
+</set>

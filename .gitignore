@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.idea
+naveridlogin_android_sdk_4.2.0
+gradle/wrapper
+gradle.properties
+gradlew
+gradlew.bat
+settings.gradle

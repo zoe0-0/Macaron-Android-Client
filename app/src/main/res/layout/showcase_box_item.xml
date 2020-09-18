@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="190dp"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:paddingBottom="10dp">
+
+
+<!--
+    android:background="#f4f7fc"
+-->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="146dp"
+            android:background="#00000000"
+            android:paddingBottom="45dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/filled_lineup" />
+
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="35dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_lineup_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingBottom="7dp">
+
+            <TextView
+                android:paddingRight="5dp"
+                android:layout_weight="2"
+                android:id="@+id/menu_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="이름"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <!--        <TextView
+            android:id="@+id/menu_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="마카롱 가격" />-->
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!--
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:background="#f4f7fc"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="1dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/btn_delete" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5">
+
+                <TextView
+                    android:id="@+id/menu_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="마카롱 이름" />
+                <TextView
+                    android:id="@+id/menu_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="마카롱 가격" />
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:paddingBottom="3dp"
+                android:weightSum="3.4"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+               <LinearLayout
+                   android:gravity="center_horizontal|center_vertical"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent">
+                   <Button
+                       style="?android:attr/borderlessButtonStyle"
+                       android:id="@+id/soldout"
+                       android:layout_width="35dp"
+                       android:layout_height="35dp" />
+               </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <Button
+                    style="?android:attr/borderlessButtonStyle"
+                    android:id="@+id/middle"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <Button
+                        style="?android:attr/borderlessButtonStyle"
+                        android:id="@+id/full"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+</LinearLayout>

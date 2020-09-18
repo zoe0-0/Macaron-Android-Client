@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JoinActivity"
+    android:orientation="vertical">
+
+    
+    <RadioGroup
+    android:checkedButton="@id/radio_btn_customer"
+    android:paddingTop="15dp"
+    android:id="@+id/radioGroup"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="0dp">
+    
+    <RadioButton
+        android:id="@+id/radio_btn_customer"
+        android:text="소비자"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <RadioButton
+        android:id="@+id/radio_btn_shop"
+        android:text="판매자"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+    
+</RadioGroup>
+
+    <FrameLayout
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_weight="10"
+    android:layout_width="match_parent"
+    android:layout_height="0dp">
+
+ <!-- 판매자 회원가입 폼 !-->
+<ScrollView
+    android:id="@+id/shop_join_form"
+    android:visibility="invisible"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+ <LinearLayout
+     android:paddingTop="15dp"
+     android:paddingBottom="10dp"
+     android:paddingRight="5dp"
+     android:background="#f3f3f4"
+     android:orientation="vertical"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:weightSum="26"
+     android:gravity="center_vertical|center_horizontal">
+
+     <LinearLayout
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="*아이디" />
+
+         <EditText
+             android:id="@+id/shop_id"
+             android:layout_gravity="center"
+             android:layout_weight="5"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+         <Button
+             android:gravity="center_vertical|center_horizontal"
+             android:textColor="#f48e9e"
+             android:background="#00000000"
+             android:text="중복확인"
+             android:layout_weight="2"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:weightSum="9"
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="*비밀번호" />
+
+         <EditText
+             android:id="@+id/shop_pwd"
+             android:layout_gravity="center"
+             android:layout_weight="5"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:weightSum="9"
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="*비밀번호" />
+
+         <EditText
+             android:id="@+id/shop_pwd_confirm"
+             android:layout_gravity="center"
+             android:layout_weight="5"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+     </LinearLayout>
+
+
+     <LinearLayout
+         android:weightSum="9"
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="*점주명" />
+
+         <EditText
+             android:id="@+id/shop_name"
+             android:layout_gravity="center"
+             android:layout_weight="5"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:weightSum="9"
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="*이메일" />
+
+         <EditText
+             android:id="@+id/shop_email"
+             android:layout_gravity="center"
+             android:layout_weight="5"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+     </LinearLayout>
+
+
+
+     <LinearLayout
+         android:weightSum="9"
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="*가게이름" />
+
+         <EditText
+             android:id="@+id/shop_shopName"
+             android:layout_gravity="center"
+             android:layout_weight="5"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:weightSum="9"
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="*대표번호" />
+
+         <EditText
+
+             android:digits="0123456789"
+             android:inputType="number"
+             android:id="@+id/shop_number"
+             android:layout_gravity="center"
+             android:layout_weight="5"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:weightSum="9"
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="*가게주소" />
+
+         <EditText
+             android:textSize="10dp"
+             android:id="@+id/shop_address"
+             android:layout_gravity="center"
+             android:layout_weight="5"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+         <Button
+             android:gravity="center_vertical|center_horizontal"
+             android:onClick="onClickAdressAddBtn"
+             android:textColor="#f48e9e"
+             android:background="#00000000"
+             android:text="주소찾기"
+             android:layout_weight="2"
+             android:layout_width="0dp"
+             android:layout_height="match_parent" />
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:weightSum="9"
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="대표이미지" />
+
+         <EditText
+             android:textSize="10dp"
+             android:id="@+id/shop_image"
+             android:layout_gravity="center"
+             android:layout_weight="5"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+         <Button
+             android:gravity="center_vertical|center_horizontal"
+             android:onClick="onClickImageAddBtn"
+             android:textColor="#f48e9e"
+             android:background="#00000000"
+             android:text="사진등록"
+             android:layout_weight="2"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:weightSum="9"
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:privateImeOptions="defaultInputmode=korean;"
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="SNS 주소" />
+
+         <EditText
+             android:id="@+id/shop_sns"
+             android:layout_gravity="center"
+             android:layout_weight="5"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:weightSum="9"
+         android:gravity="left|center_vertical"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+
+         <TextView
+             android:gravity="center_vertical|center_horizontal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:text="쇼케이스" />
+
+         <EditText
+             android:digits="0123456789"
+             android:inputType="number"
+             android:gravity="center"
+             android:id="@+id/shop_showcase_col"
+             android:hint="행(ROW)"
+             android:layout_gravity="center"
+             android:layout_weight="2"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+         <TextView
+             android:textAlignment="center"
+             android:text="X"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+         <EditText
+             android:digits="0123456789"
+             android:inputType="number"
+             android:gravity="center"
+             android:id="@+id/shop_showcase_row"
+             android:hint="열(COL)"
+             android:layout_gravity="center"
+             android:layout_weight="2"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+
+     </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Button
+            android:textColor="#ffffff"
+            android:background="@drawable/round_btn"
+            android:onClick="onClickShopJoin"
+            android:id="@+id/btn_shop_join"
+            android:text="JOIN"
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+
+ </LinearLayout>
+<!-- 판매자 회원가입 폼 !-->
+
+</ScrollView>
+
+<!-- 소비자 회원가입 폼 !-->
+<ScrollView
+            android:id="@+id/customer_join_form"
+            android:visibility="visible"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:background="#f3f3f4"
+        android:weightSum="14"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="*아이디" />
+
+                    <EditText
+                        android:id="@+id/customer_id"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="#f48e9e"
+                        android:background="#00000000"
+                        android:text="중복확인"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="9"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="*비밀번호" />
+
+                    <EditText
+                        android:id="@+id/customer_pwd"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="9"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="*비밀번호" />
+
+                    <EditText
+                        android:id="@+id/customer_pwd_confirm"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="9"
+            android:gravity="left|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="*이름" />
+
+            <EditText
+                android:id="@+id/customer_name"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="9"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="*닉네임" />
+
+                    <EditText
+                        android:id="@+id/customer_nickname"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="#f48e9e"
+                        android:background="#00000000"
+                        android:text="중복확인"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:weightSum="9"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="*이메일" />
+
+                    <EditText
+                        android:id="@+id/customer_email"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <Button
+                android:textColor="#ffffff"
+                android:background="@drawable/round_btn"
+                android:onClick="onClickCustomerJoin"
+                android:gravity="center_horizontal|center_vertical"
+                android:id="@+id/btn_customer_join"
+                android:text="JOIN"
+                android:layout_width="250dp"
+                android:layout_height="50dp"/>
+
+
+        </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+</ScrollView>
+
+</FrameLayout>
+
+</LinearLayout>
